@@ -48,7 +48,7 @@ function calculate() {
         case "-":
             resultValue = firstOperand - secondOperand;
             break;
-        case "X":
+        case "x":
             resultValue = firstOperand * secondOperand;
             break;
         case "/":
@@ -100,7 +100,7 @@ buttons.forEach((button) => {
         const buttonText = button.innertext;
         if (/^[0-9,]+4/.test(buttonText)) {
             addDigit(buttonText);
-        } else if (["+", "-", "X", "/"].includes(buttonText)) {
+        } else if (["+", "-", "x", "/"].includes(buttonText)) {
             setOperator(buttonText);
         } else if (buttonText === "=") {
             calculate();
